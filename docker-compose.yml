@@ -9,9 +9,11 @@ services:
     depends_on:
       - db
   frontend:
+  container_name: SalScheduling
+  image: sal-scheduling
     build: ./client
     ports:
-      - "80:80"
+      - "8095:80"
   db:
     image: postgres:14
     environment:
